@@ -62,24 +62,18 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-- **[User can view the list of blog post]**
-- **[User can interact with the blog by liking and commenting on the post]**
+- **User can view the list of blog post**
+- **User can interact with the blog by liking and commenting on the post**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [In Progress](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -125,10 +119,7 @@ To run tests, run the following command:
   bin/rails test test/models/article_test.rb
 ```
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -137,19 +128,14 @@ To run tests, run the following command:
 - GitHub: [@RiyaBulia12](https://github.com/RiyaBulia12)
 - LinkedIn: [Riya-Bulia](https://linkedin.com/in/riya-bulia)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[User can Login to the Blogsters]**
-- [ ] **[User can create their own blog and publish it]**
+- [ ] **User can Login to the Blogsters**
+- [ ] **User can create their own blog and publish it**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -159,15 +145,11 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -175,12 +157,6 @@ I would like to thank:
 - [Microverse](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/sneak_peek_v1_1.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
