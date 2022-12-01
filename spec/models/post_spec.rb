@@ -2,11 +2,13 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   before(:all) do
-    @user = User.new(name:'Jon', photo:'photo.png', bio:'This is a bio', posts_counter:0)
+    @user = User.new(name: 'Jon', photo: 'photo.png', bio: 'This is a bio', posts_counter: 0)
     @user.save
   end
 
-  subject { Post.new(title:'Hello', text:'This is a post title', comments_counter:0, likes_counter: 0, author_id: @user.id) }
+  subject do
+    Post.new(title: 'Hello', text: 'This is a post title', comments_counter: 0, likes_counter: 0, author_id: @user.id)
+  end
 
   before { subject.save }
 
@@ -20,12 +22,12 @@ RSpec.describe Post, type: :model do
   end
 
   it 'title should be valid if less than 250' do
-    subject.title = 'This is a new title '*10
+    subject.title = 'This is a new title ' * 10
     expect(subject).to be_valid
   end
 
   it 'title should invalid if is greater than  250' do
-    subject.title = 'This is a new title '*50
+    subject.title = 'This is a new title ' * 50
     expect(subject).to_not be_valid
   end
 
@@ -62,5 +64,4 @@ RSpec.describe Post, type: :model do
   it 'posts count should return 1' do
     expect(subject.author.posts_counter).to eq(1)
   end
-
 end

@@ -11,10 +11,9 @@ RSpec.describe Comment, type: :model do
 
   subject { Comment.new(text: 'comment test', author_id: @user.id, post_id: @post.id) }
 
-  before {subject.save}
+  before { subject.save }
 
   it 'comments shoulld be increment by 1' do
     expect(subject.post.comments_counter).to eq(1)
   end
-
 end
