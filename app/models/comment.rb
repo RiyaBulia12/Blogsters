@@ -6,6 +6,6 @@ class Comment < ApplicationRecord
   private
 
   def update_comments_count
-    post.update(comments_counter: post.likes.count)
+    post.update(comments_counter: post.comments.count)
   end
 end
