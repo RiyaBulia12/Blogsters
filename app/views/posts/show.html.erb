@@ -1,1 +1,1 @@
-<h1>Posts_id are coming soon!</h1>
+<%= render partial: 'post_info', locals: { post: @post, comments: @post.latest_five_comments} %>
