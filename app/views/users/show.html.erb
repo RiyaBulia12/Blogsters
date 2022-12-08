@@ -1,1 +1,27 @@
-<h1>User_id are coming soon!</h1>
+<div class="mt-2">
+  <ul role="users" class="-my-6 divide-y divide-gray-200">
+    <%= render partial: "users/user_info", locals: { user: @user } %>
+  </ul>
+
+  <%= render partial: "users/user_bio", locals: { user: @user } %>
+
+  <ul role="users" class="">
+    <% if @user.posts.empty? %>
+      <h3>There are no post :(</h3>
+    <% else %>
+      <% @user.posts.each do |post|%>
+          <%= render partial: "posts/post_info", locals: { post: post,  comments: post.latest_five_comments } %>
+      <% end %>
+    <% end %>
+
+  </ul>
+
+ <% if @user.posts.length > 0 %>
+  <div class="flex flex-1 items-end justify-center text-sm">
+    <button type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><h2 class="text-3xl text-gray-900">
+      <a href="/users/<%= @user.id %>/posts">See all Posts</a>
+    </h2></button>
+  </div>
+  <% end %>
+</div>
+
