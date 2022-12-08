@@ -1,4 +1,4 @@
-<li class="flex py-6">
+<li class="flex py-6 border-black border-4 p-4 m-8">
   <div class="ml-4 flex flex-1 flex-col">
     <div class="flex justify-between text-base font-medium">
       <h4 class="text-2xl text-gray-900">
@@ -14,10 +14,3 @@
     <p class='post-content'><%= post.text %></p>
   </div>
 </li>
-
-<% if comments.any? %>
-    <%= render partial: 'posts/post_comments', locals: { post: post, comments: comments} %>
-<% end %>
-<% if comments.empty? %>
-  <h3>There no comments for this post!</h3>
-<% end %>

@@ -1,5 +1,5 @@
 <div class="mt-8">
-    <ul role="users" class="-my-6 divide-y divide-gray-200">
+    <ul>
       <% @users.each do |user|%>
         <%= render partial: "users/user_info", locals: { user: user } %>
       <% end %>
