@@ -1,0 +1,12 @@
+<li class="flex py-6">
+  <div class="ml-4 flex flex-1 flex-col">
+   <% comments.each do |comment| %>
+    <div class="flex justify-between text-base font-medium">
+      <p class="text-sm text-gray-900">
+        <%= comment.author.name %>:
+        <span type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= comment.text%></span>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</li>

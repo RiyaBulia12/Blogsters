@@ -1,1 +1,26 @@
-<h1>User_id are coming soon!</h1>
+<div class="mt-2">
+  <ul>
+    <%= render partial: "users/user_info", locals: { user: @user } %>
+  </ul>
+
+  <%= render partial: "users/user_bio", locals: { user: @user } %>
+
+  <ul>
+    <% if @user.posts.empty? %>
+      <h3>There are no post :(</h3>
+    <% else %>
+      <% @user.posts.each do |post|%>
+          <%= render partial: "posts/post_info", locals: { post: post } %>
+      <% end %>
+    <% end %>
+  </ul>
+
+ <% if @user.posts.length > 0 %>
+  <div class="flex flex-1 items-end justify-center text-sm">
+    <button type="button" class="text-indigo-600 hover:text-indigo-500 ml-4 text-xl border-black border-4 p-4 mx-8">
+      <a href="/users/<%= @user.id %>/posts">See all Posts</a>
+    </button>
+  </div>
+  <% end %>
+</div>
+

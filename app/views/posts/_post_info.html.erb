@@ -1,0 +1,16 @@
+<li class="flex py-6 border-black border-4 p-4 m-8">
+  <div class="ml-4 flex flex-1 flex-col">
+    <div class="flex justify-between text-base font-medium">
+      <h4 class="text-2xl text-gray-900">
+        <a href="/users/<%= post.author.id %>/posts/<%= post.id %>"> <%= post.title%> #<%= post.id%> </a>
+      </h4>
+    </div>
+    <div class="flex flex-1 items-end justify-end text-sm">
+      <p class="text-gray-500 ml-4">Comments </p>
+      <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= post.comments_counter%></p>
+      <p class="text-gray-500 ml-4">Likes </p>
+      <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= post.likes_counter%></p>
+    </div>
+    <p class='post-content'><%= post.text %></p>
+  </div>
+</li>
