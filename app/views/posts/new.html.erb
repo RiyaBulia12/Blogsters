@@ -1,10 +1,10 @@
   <h2 class="text-indigo-600 text-xl my-4 py-4 ">
     Create New Post
   </h2>
-  <form action="#" method="POST">
-      <input type="text" name="post-title" id="" class="block w-full flex-1 border-black border-4 p-4 sm:text-sm" placeholder="Title">
+  <%= form_with model: @post, url: user_posts_path do |form| %>
+    <%= form.text_field :title, class:"block w-full flex-1 border-black border-4 p-4 sm:text-sm", placeholder:"Title" %>
 
-      <textarea id="about" name="about" rows="3" class="mt-4 block w-full border-black border-4 p-4 sm:text-sm" placeholder="Description"></textarea>
+    <%= form.text_field :text, class:"mt-4 block w-full border-black border-4 p-4 sm:text-sm", placeholder:"Description" %>
 
-      <button type="submit" class="inline-flex justify-center text-indigo-600 my-4 mx-auto text-sm font-medium border-black border-4 py-2 px-4">Save</button>
-  </form>
+    <%= form.submit class:"inline-flex justify-center text-indigo-600 my-4 mx-auto text-sm font-medium border-black border-4 py-2 px-4" %>
+<% end %>

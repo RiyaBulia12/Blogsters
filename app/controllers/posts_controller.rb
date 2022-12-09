@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
+    @posts = @user.posts
   end
 
   def show
-    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+    @post = @user.posts.find(params[:id])
   end
 
   def new
@@ -12,11 +14,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    if @post.save
-      redirect_to user_post_url(@post.user_id, @post.id)
+    post = Post.new(params.require(:post).permit(:title, :text))
+    post.author = current_user
+
+    if post.save
+      redirect_to "/users/#{post.author.id}/posts"
     else
-      flash.now[:errors] = @post.errors.full_messages
+      flash.now[:errors] = post.errors.full_messages
       render :new
     end
   end
