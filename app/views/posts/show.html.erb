@@ -1,9 +1,1 @@
 <%= render partial: 'post_info', locals: { post: @post} %>
-<ul class="border-black border-4 px-4 py-2 m-8">
-  <% if @post.comments.any? %>
-    <%= render partial: 'posts/post_comments', locals: { comments: @post.latest_five_comments} %>
-  <% end %>
-  <% if @post.comments.empty? %>
-    <h3>There no comments for this post!</h3>
-  <% end %>
-</ul>

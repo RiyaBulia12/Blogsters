@@ -12,5 +12,20 @@
       <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= post.likes_counter%></p>
     </div>
     <p class='post-content'><%= post.text %></p>
+
+    <ul>
+      <% if request.path.include?('/posts') %>
+        <% if post.comments.any? %>
+          <%= render partial: 'posts/post_comments', locals: { comments: post.latest_five_comments} %>
+        <% end %>
+
+        <% if post.comments.empty? %>
+          <p class="ml-4 font-medium text-sm text-gray-900 pt-6">
+            <span class="text-indigo-600 hover:text-indigo-500">There no comments for this post!</span>
+          </p>
+        <% end %>
+      <% end %>
+    </ul>
+
   </div>
 </li>
