@@ -9,7 +9,5 @@ class CommentsController < ApplicationController
     else
       render :create
     end
-
   end
-
 end
