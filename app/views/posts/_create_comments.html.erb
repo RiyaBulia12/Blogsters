@@ -1,0 +1,13 @@
+<li class="flex py-6 p-4 m-4">
+  <div class="ml-4 flex flex-1 flex-col">
+    <h2 class="text-indigo-600 text-xl text-center my-4 py-4 ">
+      Add New Comment
+    </h2>
+    <%= form_with(model: [ author, author.comments.build ], url: "/users/#{@post.author.id}/posts/#{@post.id}/comments") do |form| %>
+
+      <%= form.text_field :text, class:"block w-full flex-1 border-black border-4 p-4 sm:text-sm", placeholder:"Comment" %>
+
+      <%= form.button "Comment", class:"flex justify-center text-indigo-600 my-4 mx-auto text-sm font-medium border-black border-4 py-2 px-4" %>
+    <% end %>
+  </div>
+</li>
