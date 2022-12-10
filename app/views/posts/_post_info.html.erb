@@ -6,10 +6,13 @@
       </h4>
     </div>
     <div class="flex flex-1 items-end justify-end text-sm">
+
       <p class="text-gray-500 ml-4">Comments </p>
-      <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= post.comments_counter%></p>
+      <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-2"><%= post.comments_counter%></p>
+
       <p class="text-gray-500 ml-4">Likes </p>
-      <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= post.likes_counter%></p>
+      <%= render partial: "posts/create_likes", locals: {post: post} %>
+
     </div>
     <p class='post-content'><%= post.text %></p>
 

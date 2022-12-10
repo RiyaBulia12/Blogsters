@@ -1,0 +1,5 @@
+
+<%= form_with url: "/users/#{post.author.id}/posts/#{post.id}/likes", class:"flex" do |form| %>
+  <p type="button" class="text-indigo-600 hover:text-indigo-500 ml-2"><%= post.likes_counter%></p>
+  <%= form.button "[ + ]",  class: "text-indigo-600 hover:text-indigo-500 ml-2" %>
+<% end %>
