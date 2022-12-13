@@ -9,7 +9,7 @@
     <% if @user.posts.empty? %>
       <h3>There are no post :(</h3>
     <% else %>
-      <% @user.posts.each do |post|%>
+      <% @posts.each do |post|%>
           <%= render partial: "posts/post_info", locals: { post: post } %>
       <% end %>
     <% end %>
