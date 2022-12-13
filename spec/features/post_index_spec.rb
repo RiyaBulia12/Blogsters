@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "User's Posts", type: :feature do
   describe 'Index Page' do
-
     before(:each) do
       @user1 = User.create! name: 'Tom', photo: 'https://source.unsplash.com/user/c_v_r/100x100', bio: 'Tom bio'
       @post1 = Post.create! title: 'Post 1', text: 'Post content goes here', author_id: @user1.id
@@ -26,34 +25,33 @@ RSpec.describe "User's Posts", type: :feature do
       expect(page).to have_content(@user1.name)
     end
 
-    it 'should see users number of posts'do
+    it 'should see users number of posts' do
       expect(page).to have_content("Number of Posts\n3")
     end
 
-    it 'should see post title'do
+    it 'should see post title' do
       expect(page).to have_content(@post1.title)
     end
 
-    it 'should see post body'do
+    it 'should see post body' do
       expect(page).to have_content(@post1.text)
     end
 
-    it 'should see post comments'do
+    it 'should see post comments' do
       expect(page).to have_content(@post1.comments.first.text)
     end
 
-    it 'should see post number of comments'do
+    it 'should see post number of comments' do
       expect(page).to have_content(@post1.comments.count)
     end
 
-    it 'should see post number of likes'do
+    it 'should see post number of likes' do
       expect(page).to have_content(@post1.likes.count)
     end
 
-    it 'should redirect to post show page when post is clicked'do
+    it 'should redirect to post show page when post is clicked' do
       click_link @post1.title
       expect(page).to have_current_path(user_post_path(@user1, @post1))
     end
-
   end
 end
