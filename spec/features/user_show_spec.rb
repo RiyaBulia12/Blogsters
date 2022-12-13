@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "User Show", type: :feature do
-  describe 'show page' do
+RSpec.describe "Specific User", type: :feature do
+  describe 'Show Page' do
     before(:each) do
       @user1 = User.create! name: 'Tom', photo: 'https://source.unsplash.com/user/c_v_r/100x100', bio: 'Tom bio'
       @user2 = User.create! name: 'Lilly', photo: 'https://i.picsum.photos/id/216/200/300.jpg?hmac', bio: 'Lilly bio'
