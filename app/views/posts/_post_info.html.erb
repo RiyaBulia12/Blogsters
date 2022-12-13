@@ -19,7 +19,7 @@
     <ul>
       <% if request.path.include?('/posts') %>
         <% if post.comments.any? %>
-          <%= render partial: 'posts/post_comments', locals: { comments: post.latest_five_comments} %>
+          <%= render partial: 'posts/post_comments', locals: { comments: post.latest_five_comments.includes(:author)} %>
         <% end %>
 
         <% if post.comments.empty? %>
