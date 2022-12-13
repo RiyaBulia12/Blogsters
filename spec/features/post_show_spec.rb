@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Specific Post", type: :feature do
+RSpec.describe 'Specific Post', type: :feature do
   describe 'Show page' do
     before(:each) do
       @user1 = User.create! name: 'Tom', photo: 'https://source.unsplash.com/user/c_v_r/100x100', bio: 'Tom bio'
@@ -35,6 +35,5 @@ RSpec.describe "Specific Post", type: :feature do
     it 'should see comments content' do
       expect(page).to have_content(@comment1.text)
     end
-
   end
 end

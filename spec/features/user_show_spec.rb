@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Specific User", type: :feature do
+RSpec.describe 'Specific User', type: :feature do
   describe 'Show Page' do
     before(:each) do
       @user1 = User.create! name: 'Tom', photo: 'https://source.unsplash.com/user/c_v_r/100x100', bio: 'Tom bio'
@@ -45,6 +45,5 @@ RSpec.describe "Specific User", type: :feature do
       click_link 'See all Posts'
       expect(page).to have_current_path(user_posts_path(@user1))
     end
-
   end
 end

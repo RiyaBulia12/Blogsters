@@ -2,10 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "User's", type: :feature do
   describe 'Index Page' do
-
     before(:each) do
-      @user1 = User.create! name: 'Tom', photo: 'https://source.unsplash.com/user/c_v_r/100x100', bio: 'Tom bio'
-      @user2 = User.create! name: 'Lilly', photo: 'https://i.picsum.photos/id/216/200/300.jpg?hmac=c3OXbiUxWPMgwnaFpX8ZAfBL5TZzWjnof6mb4OwuSPs', bio: 'Lilly bio'
+      @user1 = User.create! name: 'Tom',
+                            photo: 'https://source.unsplash.com/user/c_v_r/100x100',
+                            bio: 'Tom bio'
+      @user2 = User.create! name: 'Lilly',
+                            photo: 'https://source.unsplash.com/user/c_v_r/100x100',
+                            bio: 'Lilly bio'
       visit users_path
     end
 
@@ -26,6 +29,5 @@ RSpec.describe "User's", type: :feature do
       click_link 'Tom'
       expect(page).to have_current_path(user_path(@user1))
     end
-
   end
 end
