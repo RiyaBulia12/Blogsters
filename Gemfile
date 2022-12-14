@@ -65,7 +65,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem "letter_opener"
+  gem 'letter_opener'
 end
 
 group :test do
@@ -78,5 +78,5 @@ end
 gem 'rails-controller-testing'
 gem 'rspec-rails', '~> 6.0.0.rc1'
 
-gem 'tailwindcss-rails', '~> 2.0'
 gem 'devise'
+gem 'tailwindcss-rails', '~> 2.0'
