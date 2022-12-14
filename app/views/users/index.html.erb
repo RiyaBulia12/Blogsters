@@ -1,9 +1,11 @@
-<div class="flex flex-1 items-end justify-center text-sm">
-    <h1 class="text-4xl font-bold">LoggedIn User: <%= @current_user.name %></h1>
-    <button type="button" class="text-indigo-600 hover:text-indigo-500 ml-4 text-xl border-black border-4 p-4 mx-8">
-      <a href="/users/<%= @current_user.id %>/posts/new">Create Post </a>
-    </button>
+<div class="flex flex-1 justify-around items-center text-sm m-8">
+  <h1 class="text-2xl font-bold">Welcome <%= @current_user.name %>!</h1>
+  <div class="flex">
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "text-indigo-600 hover:text-indigo-800" %>
+      <% end %>
   </div>
+</div>
 <div class="mt-8">
     <ul>
       <% @users.each do |user|%>
@@ -19,6 +21,12 @@
       <% end %>
     </p>
 </div>
+<div class="flex flex-1 items-end justify-center text-sm">
+  <button type="button" class="text-indigo-600 hover:text-indigo-500 ml-4 text-xl border-black border-4 p-4 mx-8">
+    <a href="/users/<%= @current_user.id %>/posts/new">Create Post </a>
+  </button>
+</div>
+
 
 
 

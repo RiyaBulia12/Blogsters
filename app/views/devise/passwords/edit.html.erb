@@ -1,0 +1,20 @@
+<h2 class="text-center text-4xl ">Change your password</h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field border-4 border-black m-4 w-full">
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "w-full", placeholder: "New Password (6 characters minimum)" %>
+  </div>
+
+  <div class="field border-4 border-black m-4 w-full">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "w-full", placeholder: "Confirm Password" %>
+  </div>
+
+  <div class="actions m-4 border-4 border-indigo-600 mx-4 my-8 w-full text-center hover:bg-indigo-600">
+    <%= f.submit "Change my password", class:"font-bold p-3 text-sm text-slate-600 hover:text-white  w-full" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
