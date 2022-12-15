@@ -2,9 +2,6 @@
 
 <div align="center">
 
-  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Blogsters</b></h3>
 
 </div>
