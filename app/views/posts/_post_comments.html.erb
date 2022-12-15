@@ -6,6 +6,9 @@
         <%= comment.author.name %>:
         <span type="button" class="text-indigo-600 hover:text-indigo-500 ml-4"><%= comment.text%></span>
       </p>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(@user.id, comment.post_id, comment.id), method: :delete, class: "text-indigo-600 hover:text-indigo-500 ml-2" %>
+      <% end %>
     </div>
     <% end %>
   </div>

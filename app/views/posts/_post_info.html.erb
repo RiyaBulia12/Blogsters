@@ -13,6 +13,9 @@
       <p class="text-gray-500 ml-4">Likes </p>
       <%= render partial: "posts/create_likes", locals: {post: post} %>
 
+      <% if can? :destroy, post %>
+        <%= button_to "Delete", user_post_path(post.author_id, post), method: :delete, class: "text-indigo-600 hover:text-indigo-500 ml-2" %>
+      <% end %>
     </div>
     <p class='post-content'><%= post.text %></p>
 

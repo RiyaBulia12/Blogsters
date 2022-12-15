@@ -2,16 +2,13 @@
 
 <div align="center">
 
-  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Blogsters</b></h3>
+  <h1><b>Blogsters</b></h3>
 
 </div>
 
 <!-- TABLE OF CONTENTS -->
 
-# 📗 Table of Contents
+### 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)

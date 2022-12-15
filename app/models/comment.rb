@@ -1,5 +1,7 @@
 class Comment < ApplicationRecord
   after_save :update_comments_count
+  after_destroy :update_comments_count
+
   belongs_to :author, class_name: 'User'
   belongs_to :post
 

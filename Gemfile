@@ -78,5 +78,6 @@ end
 gem 'rails-controller-testing'
 gem 'rspec-rails', '~> 6.0.0.rc1'
 
+gem 'cancancan'
 gem 'devise'
 gem 'tailwindcss-rails', '~> 2.0'
