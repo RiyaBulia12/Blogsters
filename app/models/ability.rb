@@ -10,7 +10,7 @@ class Ability
     can :destroy, Post, author_id: user.id
 
     # Allow all for admins
-    can :manage, :all if user.role? == 'admin'
+    can :manage, :all if user.role == 'admin'
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
